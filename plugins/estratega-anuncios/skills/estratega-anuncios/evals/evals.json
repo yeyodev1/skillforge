@@ -1,0 +1,23 @@
+{
+  "skill_name": "estratega-anuncios",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Haz el onboarding de este cliente para anuncios: se llama Nutrivida, es una tienda de suplementos deportivos en Guayaquil, Ecuador. Instagram @nutrivida.ec, web nutrivida.ec. Llevan 3 años y ya pautan unos $800/mes en Meta.",
+      "expected_output": "Debe hacer las preguntas faltantes de la Fase 1 (ICP, nicho exacto, presencia secundaria), buscar la web e Instagram, presentar la ficha en tabla y pedir confirmación explícita ANTES de analizar nada. No debe saltar a la estrategia.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Ya te confirmé la ficha de Nutrivida. Ahora audita los anuncios de la competencia y dame la estrategia de pauta completa.",
+      "expected_output": "Debe ejecutar Fases 2, 3 y 4: análisis de comunicación del cliente, mapeo de 3 competidores locales + 1 internacional con revisión real en Meta Ads Library (indicando si alguno no pauta), matriz GAP en tabla con las 5 columnas, 3 ángulos nuevos, embudo TOFU/MOFU/BOFU y 2 guiones con la estructura de tiempos 0-3s/3-10s/10-25s/25-35s/35-45s. Sin estrategia de feed orgánico.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Analiza este nuevo cliente para anuncios y también quiero que me des ideas para el feed de Instagram. Es una clínica dental en Bogotá, @sonrisaperfecta.co, web sonrisaperfecta.co, 8 años en el mercado, nunca han pautado.",
+      "expected_output": "Debe completar Fase 1 con preguntas y confirmación, y registrar que el usuario pidió feed orgánico explícitamente para incluirlo en la sección 5 del informe final. En Fase 2 debe notar que el cliente no pauta y basar el análisis en web/Instagram sin inventar anuncios.",
+      "files": []
+    }
+  ]
+}

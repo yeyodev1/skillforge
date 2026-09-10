@@ -1,0 +1,22 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "skillforge",
+  "description": "SkillForge: la forja de skills y plugins de Claude Code de Diego Reyes. Marketing, pauta, estrategia y productividad.",
+  "owner": {
+    "name": "Diego Reyes",
+    "url": "https://github.com/yeyodev1"
+  },
+  "plugins": [
+    {
+      "name": "estratega-anuncios",
+      "description": "Onboarding de clientes, auditoría de competencia en Meta Ads Library, matriz GAP comunicacional y estrategia de pauta con guiones. 100% enfocado en anuncios pagos.",
+      "author": {
+        "name": "Diego Reyes",
+        "url": "https://github.com/yeyodev1"
+      },
+      "source": "./plugins/estratega-anuncios",
+      "category": "marketing",
+      "homepage": "https://github.com/yeyodev1/skillforge/tree/main/plugins/estratega-anuncios"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+# Configuración local de Claude Code (específica de cada máquina)
+.claude/settings.local.json
+
+# Artefactos de empaquetado (se publican como assets en GitHub Releases)
+dist/
+
+# Workspaces de evaluación del skill-creator
+*-workspace/
+
+# Sistema
+.DS_Store
+__MACOSX/
