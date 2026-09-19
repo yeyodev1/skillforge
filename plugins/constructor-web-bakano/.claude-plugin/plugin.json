@@ -1,0 +1,13 @@
+{
+  "name": "constructor-web-bakano",
+  "version": "1.0.0",
+  "description": "Del brief de una reunión a la plataforma funcionando: scaffolding con create-backapp y create-frontapp, MongoDB Atlas por MCP, Payphone, Bunny Stream, Cloudinary, Resend, carga de contenido desde Drive y accesos de alumnos.",
+  "author": {
+    "name": "Diego Reyes",
+    "url": "https://github.com/yeyodev1"
+  },
+  "homepage": "https://github.com/yeyodev1/skillforge/tree/main/plugins/constructor-web-bakano",
+  "repository": "https://github.com/yeyodev1/skillforge",
+  "license": "MIT",
+  "keywords": ["fullstack", "express", "vue", "mongodb-atlas", "payphone", "bunny-stream", "cloudinary", "resend", "cursos", "ecommerce"]
+}
