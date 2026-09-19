@@ -1,0 +1,24 @@
+# Plantilla — copiar a .env y rellenar. El .env real nunca se versiona.
+
+# ─── Base ─────────────────────────────────────────────────────────────
+DB_URI=mongodb://localhost:27017/__DB_NAME__
+PORT=__PORT__
+JWT_SECRET=cambiame_por_algo_largo
+SLACK_ERROR_WEBHOOK=
+
+# Orígenes CORS extra (producción, túneles), separados por coma
+CORS_ORIGINS=
+FRONTEND_URL=http://localhost:5173
+
+# ─── Admin ────────────────────────────────────────────────────────────
+# Cuenta de administración que se siembra al arrancar si no existe.
+# Sin ADMIN_PASSWORD no se crea nada.
+ADMIN_EMAIL=admin@__DOMAIN__
+ADMIN_PASSWORD=
+ADMIN_NAME=Administración
+
+# ─── Correo (Resend) ──────────────────────────────────────────────────
+# Sin la key el API funciona igual, pero no envía correos.
+RESEND_API_KEY=
+RESEND_FROM_EMAIL=__TITLE__ <onboarding@resend.dev>
+# @@extras-env@@

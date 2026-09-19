@@ -1,0 +1,27 @@
+{
+  "name": "create-backapp",
+  "version": "0.1.0",
+  "description": "Scaffolding de backapps Bakano: Express 5 + Mongoose + TypeScript, listo para Vercel.",
+  "type": "module",
+  "bin": {
+    "create-backapp": "bin/create-backapp.js"
+  },
+  "files": [
+    "bin",
+    "template",
+    "extras"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "scaffold",
+    "express",
+    "typescript",
+    "mongoose",
+    "vercel",
+    "bakano"
+  ],
+  "author": "Diego Reyes",
+  "license": "MIT"
+}
