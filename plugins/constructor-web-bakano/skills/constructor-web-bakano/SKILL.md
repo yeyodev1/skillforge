@@ -220,5 +220,20 @@ A cada subagente dale: la ruta del repo, la orden de leer su `CLAUDE.md`, las re
 exacta de archivos que le tocan y el contrato del API (rutas, payloads, respuestas). No le pases secretos: el código
 los lee de `env.ts`.
 
+### Archivos compartidos: solo los toca el coordinador
+
+Hay archivos que todos los módulos necesitan y donde dos agentes se pisarían aunque sus listas sean distintas:
+
+- **Backapp:** `src/routes/index.ts`, `src/config/env.ts`, `src/app.ts`, `package.json`, `.env.example`.
+- **Frontapp:** `src/router/index.ts`, `src/config/site.ts`, `src/types/index.ts`, `src/styles/*`, `src/main.ts`, `package.json`.
+
+Ningún subagente los edita. **Antes** de lanzar una tanda, tú los dejas listos: variables en `env.ts`, rutas montadas en
+`routes/index.ts` y en el router apuntando a los archivos que cada agente va a crear, tipos del contrato del API,
+dependencias instaladas. Si un subagente descubre que necesita un cambio ahí, no lo hace: lo devuelve en su reporte y
+lo aplicas tú al integrar. Lo mismo con `pnpm add`: instalar en paralelo corrompe el lockfile.
+
+Al terminar cada tanda, integra antes de lanzar la siguiente: `pnpm build` en el repo, `git status` limpio y revisión
+de que nadie tocó archivos fuera de su lista (`git log --name-only`).
+
 Dos agentes pueden trabajar en el mismo repo solo si sus archivos no se pisan. Cada uno commitea únicamente lo suyo
 con `git add <archivo>` y `git commit -m "..." -- <archivo>`. Si aparece `index.lock`, espera y reintenta; no lo borres.
