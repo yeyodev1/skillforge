@@ -69,6 +69,9 @@ npx create-frontapp <cliente> -y --title "<Nombre visible>" --color "<#hex de ma
 - `--uploads` siempre que haya portadas, imágenes o archivos (casi siempre).
 - `--cron` si hay tareas programadas: vencimiento de accesos, recordatorios, reportes.
 - `--gsap` solo si el brief pide animación rica.
+- `-y` es obligatorio: sin él el CLI hace preguntas interactivas que un agente no puede contestar.
+- El backapp nace con su `.env` listo: `JWT_SECRET` y `ADMIN_PASSWORD` generados y `DB_URI` apuntando a Mongo local.
+  Esa línea `DB_URI` es la que reemplaza la Fase 2.
 - Cada CLI deja el repo con `git init`, dependencias instaladas y el primer commit. Confirma que la rama se llama `main`
   (`git branch -M main` si hace falta).
 
@@ -91,8 +94,8 @@ Escribe en el `.env` del backapp todo lo recibido y replica **solo los nombres**
 
 | Módulo | Variables |
 |---|---|
-| Base | `DB_URI`, `JWT_SECRET` (genera uno largo), `FRONTEND_URL`, `CORS_ORIGINS` |
-| Admin | `ADMIN_EMAIL`, `ADMIN_PASSWORD`, `ADMIN_NAME` |
+| Base | `DB_URI` (Fase 2), `JWT_SECRET` (ya lo generó el CLI: no lo cambies), `FRONTEND_URL`, `CORS_ORIGINS` |
+| Admin | `ADMIN_EMAIL`, `ADMIN_PASSWORD` (ya lo generó el CLI: no lo cambies, repórtalo al final), `ADMIN_NAME` |
 | Alumno demo | `DEMO_STUDENT_EMAIL`, `DEMO_STUDENT_PASSWORD` |
 | Payphone | `PAYPHONE_TOKEN`, `PAYPHONE_STORE_ID` |
 | Bunny Stream | `BUNNY_LIBRARY_ID`, `BUNNY_CDN_HOSTNAME`, `BUNNY_STREAM_API_KEY`, `BUNNY_STREAM_READ_KEY`, `BUNNY_ACCOUNT_API_KEY`, `BUNNY_TOKEN_AUTH_KEY` |
