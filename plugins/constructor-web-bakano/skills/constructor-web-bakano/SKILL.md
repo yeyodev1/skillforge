@@ -52,8 +52,24 @@ Lee completas las notas, la transcripción y todo lo que el usuario pegó. Extra
 - **Dominios:** producción y preview (`https://dev-<proyecto>-front.bakano.ec`).
 - **Credenciales recibidas y faltantes**, por nombre de variable, sin repetir los valores.
 
-Si falta algo que bloquea (por ejemplo no hay token de Payphone y hay que cobrar), sigue con todo lo demás y deja ese
-módulo listo para enchufar; repórtalo al final. No frenes el proyecto entero por una credencial.
+### Qué pedir y cuándo
+
+No exijas todo al inicio ni asumas que el usuario ya lo pegó. Pide lo mínimo para arrancar y el resto cuando llega la
+fase que lo necesita. Lo que ya venga en el mensaje no se vuelve a preguntar: se confirma en la ficha.
+
+| Momento | Se pide (solo si falta) |
+|---|---|
+| Antes de la Fase 1 | Nombre del cliente, qué vende, dominio de producción, color o web de referencia |
+| Antes de la Fase 2 | Nada si el MCP de Atlas responde. Si no está configurado, el `DB_URI` de un cluster existente |
+| Antes de la Fase 4 | Según los módulos de la ficha: token y store id de Payphone; library id, CDN hostname y API key de Bunny; cloud name, key y secret de Cloudinary; API key de Resend y remitente |
+| Antes de la Fase 6 | Enlace de la carpeta de Drive, compartida con la cuenta conectada al MCP |
+| Antes de la Fase 7 | Correo para el alumno demo y cuánto dura el acceso de una compra |
+
+Agrupa las preguntas de cada momento en un solo mensaje, y mientras esperas respuesta avanza con lo que no depende de ella.
+
+Si el usuario no tiene un dato que bloquea un módulo (por ejemplo todavía no le dan el token de Payphone), sigue con
+todo lo demás, deja ese módulo listo para enchufar con la variable vacía y repórtalo al final. No frenes el proyecto
+entero por una credencial.
 
 ## Fase 1: scaffolding
 
