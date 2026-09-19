@@ -3,6 +3,26 @@
 Todo se hace con las tools `mcp__mongodb-atlas__atlas-*`. Si sus esquemas no están cargados, tráelos primero con
 ToolSearch (`select:mcp__mongodb-atlas__atlas-list-orgs,...`) en lugar de adivinar parámetros.
 
+## Requisito: el MCP de Atlas configurado
+
+Comprueba primero que las tools `mcp__mongodb-atlas__*` existan. Si no existen, el usuario debe configurarlo una vez
+(tú le das los pasos; las credenciales las crea y las pega él en su terminal, no en el chat):
+
+1. En Atlas → Organization → Access Manager → **Service Accounts** → crear una con el rol
+   **Organization Project Creator** (o Owner). Copiar Client ID y Client Secret.
+2. En esa misma service account, **API Access List** → agregar la IP pública de la máquina (`curl -s ifconfig.me`).
+3. Registrar el MCP a nivel de usuario y reiniciar Claude Code:
+
+   ```bash
+   claude mcp add --scope user mongodb-atlas \
+     -e MDB_MCP_API_CLIENT_ID=<client-id> -e MDB_MCP_API_CLIENT_SECRET=<client-secret> \
+     -- npx -y mongodb-mcp-server@2.1.1
+   ```
+
+Si el usuario no quiere o no puede configurar el MCP, hay plan B: que cree el cluster a mano en cloud.mongodb.com
+(cluster gratuito → Database Access: usuario y contraseña → Network Access: `0.0.0.0/0` → Connect → Drivers) y pegue
+la connection string. Con eso saltas al paso 6 y armas el `DB_URI` igual.
+
 ## Pasos
 
 1. **Organización:** `atlas-list-orgs` y toma el `orgId`.
