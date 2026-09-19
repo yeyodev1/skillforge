@@ -17,6 +17,17 @@
       "source": "./plugins/estratega-anuncios",
       "category": "marketing",
       "homepage": "https://github.com/yeyodev1/skillforge/tree/main/plugins/estratega-anuncios"
+    },
+    {
+      "name": "constructor-web-bakano",
+      "description": "Del brief de una reunión a la plataforma funcionando: scaffolding con create-backapp y create-frontapp, MongoDB Atlas por MCP, Payphone, Bunny Stream, Cloudinary, Resend, carga de contenido desde Drive y accesos de alumnos.",
+      "author": {
+        "name": "Diego Reyes",
+        "url": "https://github.com/yeyodev1"
+      },
+      "source": "./plugins/constructor-web-bakano",
+      "category": "development",
+      "homepage": "https://github.com/yeyodev1/skillforge/tree/main/plugins/constructor-web-bakano"
     }
   ]
 }
