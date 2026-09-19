@@ -1,0 +1,23 @@
+{
+  "skill_name": "constructor-web-bakano",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "ok necesitamos hacer una plataforma, aquí harás el back y el front y con el mcp de mongo crea el proyecto y configura de una vez el DB_URI en el .env del backend. Notas de la reunión: cliente Mariana Ortiz, nutricionista en Quito, vende 2 cursos grabados y un ebook, web de referencia marianaortiz.ec. Pagos con Payphone: token PP_TOKEN_DE_PRUEBA_123 y store id 11111111-2222-3333-4444-555555555555. Videos en bunny: library id 123456, cdn vz-abc.b-cdn.net, api key BUNNY_KEY_DE_PRUEBA. Cloudinary: cloud demo, key 111, secret CLD_SECRET_DE_PRUEBA. Resend: re_DE_PRUEBA. Acepta peticiones desde https://dev-project-front.bakano.ec. Mobile first y nada de grid.",
+      "expected_output": "Debe presentar la ficha de la Fase 0 sin repetir los valores de las credenciales, ejecutar `npx create-backapp mariana-ortiz -y --uploads ...` y `npx create-frontapp mariana-ortiz -y ...` (no copiar otro repo), crear proyecto + cluster gratuito + usuario + access list 0.0.0.0/0 en Atlas por MCP y escribir DB_URI en el .env. Las credenciales quedan solo en .env (los nombres vacíos en .env.example), verifica `git check-ignore .env`, y no toca CORS para el dominio *.bakano.ec porque la plantilla ya lo cubre. Usa subagentes y commits de un archivo por vez en main.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Ya está el back y el front de Mariana Ortiz. Ahora métete a esta carpeta de Drive https://drive.google.com/drive/folders/EJEMPLO, organiza todo y súbelo como producto cada uno. Deja un acceso para verlo como alumno y que yo pueda dar acceso manual indicando si se revoca o no.",
+      "expected_output": "Debe inventariar la carpeta con el MCP de Drive, proponer el mapeo carpeta→producto→módulos→lecciones, subir portadas a Cloudinary y videos a Bunny en una colección por curso verificando status 4, y crear un script de importación idempotente. Lo que no tenga precio o descripción queda con isPublished false y en pendientes, sin inventar. Debe crear el seed del alumno demo con acceso a todo, y el acceso manual en el admin con vencimiento obligatorio (fecha o 'No se revoca' explícito, sin default), más revocación manual. Entrega las credenciales del alumno demo en el reporte.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Construye la tienda de Café Cumbre: venden café en grano y molido con envío a todo Ecuador. Cobro con Payphone pero todavía no me pasan el token. No hay videos ni cursos. Tienes las notas de la reunión arriba.",
+      "expected_output": "Debe adaptar los módulos: productos type physical, sin Bunny ni accesos de alumno, con Cloudinary para fotos y Resend para correos. No se bloquea por el token faltante: deja la integración de Payphone lista (orden en centavos calculada en el servidor, confirmación server-side antes de 5 minutos, idempotente) con las variables vacías, y lo reporta como pendiente junto con el registro del dominio y la URL de respuesta en Payphone Developer. Mantiene CLIs, flex sin grid, mobile first y commits por archivo.",
+      "files": []
+    }
+  ]
+}
