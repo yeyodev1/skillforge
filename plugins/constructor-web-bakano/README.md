@@ -17,10 +17,10 @@ O descarga el [ZIP desde Releases](https://github.com/yeyodev1/skillforge/releas
 
 | Qué | Para qué |
 |---|---|
-| `create-backapp` y `create-frontapp` disponibles con `npx` | Scaffolding de los dos repos (Express 5 + Mongoose + TS / Vue 3 + Vite + TS + SCSS) |
+| Node 20 o superior | Los generadores `create-backapp` y `create-frontapp` **vienen incluidos** en la skill (`scaffolding/`), sin dependencias. Si los tienes enlazados con `npm link`, usa esos |
 | MCP de **MongoDB Atlas** con service account | Crear proyecto, cluster, usuario y access list |
 | MCP de **Google Drive** | Leer la carpeta de contenido del cliente |
-| `pnpm` y Node 20 o superior | Instalar y correr los proyectos |
+| `pnpm` (o `npm` con `--pm npm`) | Instalar y correr los proyectos |
 
 ## 🗣️ Cómo activarlo
 
@@ -62,6 +62,7 @@ O descarga el [ZIP desde Releases](https://github.com/yeyodev1/skillforge/releas
 | `references/bunny-stream.md` | Subida, colecciones, subida directa por TUS y embeds firmados |
 | `references/contenido-drive.md` | Inventario, mapeo a productos y script de carga |
 | `references/accesos-alumnos.md` | Modelo de accesos, alumno demo, acceso manual y revocación |
+| `scaffolding/` | Copia de `create-backapp` (Express 5 + Mongoose + TS) y `create-frontapp` (Vue 3 + Vite + TS + SCSS) |
 
 ## 🧪 Pruebas
 
