@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <title>__TITLE__</title>
+    <meta name="description" content="__TITLE__" />
+    <meta name="theme-color" content="__ACCENT__" />
+
+    <!-- Open Graph / social (WhatsApp es el canal principal de compartir) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_EC" />
+    <meta property="og:site_name" content="__TITLE__" />
+    <meta property="og:title" content="__TITLE__" />
+    <meta property="og:description" content="__TITLE__" />
+    <meta property="og:url" content="__SITE_URL__" />
+    <meta property="og:image" content="__SITE_URL__/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Fuentes: siempre con <link>, nunca @import dentro del SCSS inyectado -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=__FONT_DISPLAY__:opsz,wght@9..144,400;9..144,500;9..144,600&family=__FONT_BODY__:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Free por CDN; iconos como <i class="fa-solid fa-…"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

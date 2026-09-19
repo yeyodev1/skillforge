@@ -1,0 +1,14 @@
+node_modules
+dist
+.vercel
+*.local
+*.tsbuildinfo
+vite.config.js
+node-compile-cache/
+coverage
+.DS_Store
+
+# Secretos: nunca. La plantilla .env.example sí se versiona.
+.env
+.env.*
+!.env.example

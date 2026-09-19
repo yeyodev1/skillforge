@@ -1,0 +1,47 @@
+@use 'colorVariables.module.scss' as *;
+@use 'fonts.module.scss' as *;
+
+// Escala tipográfica fluida — sin media queries para el tamaño de texto.
+$text-xs: clamp(0.72rem, 0.7rem + 0.1vw, 0.78rem);
+$text-sm: clamp(0.83rem, 0.8rem + 0.15vw, 0.9rem);
+$text-base: clamp(0.95rem, 0.9rem + 0.25vw, 1.06rem);
+$text-lg: clamp(1.1rem, 1rem + 0.5vw, 1.3rem);
+$text-xl: clamp(1.3rem, 1.1rem + 0.9vw, 1.7rem);
+$display-sm: clamp(1.7rem, 1.3rem + 1.8vw, 2.4rem);
+$display-md: clamp(2.1rem, 1.5rem + 2.9vw, 3.4rem);
+$display-lg: clamp(2.6rem, 1.6rem + 4.6vw, 5rem);
+
+// Espaciado
+$space-xs: 0.5rem;
+$space-sm: 0.85rem;
+$space-md: 1.5rem;
+$space-lg: 2.5rem;
+$space-xl: clamp(3rem, 6vw, 5rem);
+$space-section: clamp(4.5rem, 9vw, 8rem);
+
+// Radios y curvas
+$radius-sm: 10px;
+$radius-md: 18px;
+$radius-lg: 28px;
+$radius-pill: 999px;
+$ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+// Eyebrow: label chiquito en mayúsculas sobre cada título de sección
+@mixin eyebrow {
+  font-family: $font-principal;
+  font-size: $text-xs;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: $accent-deep;
+}
+
+@mixin display($size: $display-md, $weight: 500) {
+  font-family: $font-display;
+  font-size: $size;
+  font-weight: $weight;
+  font-optical-sizing: auto;
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}

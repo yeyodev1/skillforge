@@ -1,0 +1,27 @@
+{
+  "name": "create-frontapp",
+  "version": "0.1.0",
+  "description": "Scaffolding de frontapps Bakano: Vue 3 + Vite + TypeScript + SCSS + Pinia + vue-router, listo para Vercel.",
+  "type": "module",
+  "bin": {
+    "create-frontapp": "bin/create-frontapp.js"
+  },
+  "files": [
+    "bin",
+    "template",
+    "extras"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "scaffold",
+    "vue",
+    "vite",
+    "typescript",
+    "scss",
+    "bakano"
+  ],
+  "author": "Diego Reyes",
+  "license": "MIT"
+}

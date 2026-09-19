@@ -1,0 +1,84 @@
+@use 'sass:map';
+@use 'colorVariables.module.scss' as *;
+
+// Breakpoints mobile-first. Uso: @include from('md') { ... }
+$breakpoints: (
+  'sm': 480px,
+  'md': 768px,
+  'lg': 1024px,
+  'xl': 1280px,
+);
+
+@mixin from($name) {
+  $value: map.get($breakpoints, $name);
+  @if $value == null {
+    @error "Breakpoint desconocido: #{$name}";
+  }
+  @media (min-width: $value) {
+    @content;
+  }
+}
+
+@mixin until($name) {
+  $value: map.get($breakpoints, $name);
+  @media (max-width: $value - 1px) {
+    @content;
+  }
+}
+
+// Contenedor central. Layout con flexbox, no con CSS Grid.
+@mixin container($max: 1160px) {
+  width: 100%;
+  max-width: $max;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+
+  @include from('md') {
+    padding-inline: 2rem;
+  }
+}
+
+@mixin flex($dir: row, $align: center, $justify: flex-start, $gap: 0) {
+  display: flex;
+  flex-direction: $dir;
+  align-items: $align;
+  justify-content: $justify;
+  @if $gap != 0 {
+    gap: $gap;
+  }
+}
+
+// "Grilla" de tarjetas hecha con flex-wrap — sustituye a CSS Grid.
+@mixin flex-cards($basis: 280px, $gap: 1.5rem) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap;
+
+  > * {
+    flex: 1 1 $basis;
+    min-width: 0;
+  }
+}
+
+@mixin card {
+  background: $surface;
+  border: 1px solid $line;
+  border-radius: 14px;
+}
+
+@mixin transition($props: all) {
+  transition: $props 0.28s cubic-bezier(0.25, 0.6, 0.3, 1);
+}
+
+@mixin reduced-motion {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}
+
+@mixin focus-ring($color: $accent) {
+  &:focus-visible {
+    outline: 2px solid $color;
+    outline-offset: 3px;
+  }
+}

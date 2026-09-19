@@ -1,0 +1,34 @@
+// Este archivo se inyecta al inicio de CADA bloque <style lang="scss"> vía
+// vite.config.ts (additionalData). Solo puede exponer variables, funciones y
+// mixins: cualquier CSS que emita se duplicaría en todos los componentes.
+// El reset y los estilos base viven en global.scss.
+
+@forward 'colorVariables.module.scss';
+@forward 'fonts.module.scss';
+@forward 'typography';
+@forward 'mixins';
+
+@use 'sass:color';
+
+@function _to-percent($value) {
+  @if type-of($value) == 'number' and unit($value) == '%' {
+    @return $value;
+  }
+  @return $value * 1%;
+}
+
+@function lighten($c, $amount, $method: 'adjust') {
+  $pct: _to-percent($amount);
+  @if $method == 'scale' {
+    @return color.scale($c, $lightness: $pct);
+  }
+  @return color.adjust($c, $lightness: $pct);
+}
+
+@function darken($c, $amount, $method: 'adjust') {
+  $pct: _to-percent($amount);
+  @if $method == 'scale' {
+    @return color.scale($c, $lightness: -$pct);
+  }
+  @return color.adjust($c, $lightness: -$pct);
+}

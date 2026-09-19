@@ -1,0 +1,7 @@
+# Copia este archivo a .env. Todo lo que lleva prefijo VITE_ queda expuesto en el
+# navegador: acá solo van URLs y claves públicas, nunca un secreto.
+
+VITE_API_BASE_URL=http://localhost:__API_PORT__/api
+
+# Meta (Facebook) Pixel. No es secreto: viaja en el navegador. Vacío = apagado.
+VITE_META_PIXEL_ID=

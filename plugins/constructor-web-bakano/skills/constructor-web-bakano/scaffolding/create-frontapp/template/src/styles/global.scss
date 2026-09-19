@@ -1,0 +1,222 @@
+// index.scss llega inyectado por Vite (additionalData) — no repetir @use aquí.
+// Este archivo se importa UNA sola vez desde main.ts: acá va todo lo que emite CSS.
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-display: #{$font-display};
+  --font-body: #{$font-principal};
+  --bg: #{$paper};
+  --surface: #{$surface};
+  --text: #{$ink};
+  --text-soft: #{$ink-soft};
+  --accent: #{$accent};
+  --border: #{$line};
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+
+  @include reduced-motion {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: $font-principal;
+  font-size: $text-base;
+  font-weight: 400;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-display;
+  font-weight: 500;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  font-size: 0.95rem;
+  color: $ink;
+  background: $surface;
+  border: 1px solid $line;
+  border-radius: $radius-sm;
+  padding: 0.7rem 0.9rem;
+  width: 100%;
+  outline: none;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+
+  &:focus {
+    border-color: $accent;
+    box-shadow: 0 0 0 3px rgba($accent, 0.15);
+  }
+}
+
+label {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: $ink-soft;
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+:focus-visible {
+  outline: 2px solid $accent;
+  outline-offset: 2px;
+}
+
+::selection {
+  background: $accent-soft;
+  color: $ink;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: $font-principal;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.85rem 1.8rem;
+  border-radius: $radius-pill;
+  @include transition;
+
+  &--primary {
+    background: $accent;
+    color: $surface;
+
+    &:hover {
+      background: $accent-deep;
+      transform: translateY(-1px);
+    }
+  }
+
+  &--dark {
+    background: $ink;
+    color: $surface;
+
+    &:hover {
+      background: $accent-deep;
+      transform: translateY(-1px);
+    }
+  }
+
+  &--ghost {
+    border: 1px solid $ink;
+    color: $ink;
+
+    &:hover {
+      background: $ink;
+      color: $surface;
+    }
+  }
+
+  &--danger {
+    background: $danger;
+    color: $surface;
+  }
+
+  &:disabled {
+    opacity: 0.45;
+    pointer-events: none;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+// Transiciones globales de Vue — suaves, nada brusco
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.rise-enter-active,
+.rise-leave-active {
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s $ease;
+}
+.rise-enter-from,
+.rise-leave-to {
+  opacity: 0;
+  transform: translateY(14px);
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.25s ease;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+}
+
+@include reduced-motion {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

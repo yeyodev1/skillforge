@@ -1,0 +1,7 @@
+// Solo variables. Las fuentes se cargan con <link> en index.html: este archivo
+// se inyecta en cada SFC vía vite.config.ts, así que no debe emitir CSS.
+
+$font-display: '__FONT_DISPLAY__', Georgia, serif;
+$font-principal: '__FONT_BODY__', system-ui, sans-serif;
+$font-secondary: $font-principal;
+$font-body: $font-principal;
