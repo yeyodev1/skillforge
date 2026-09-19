@@ -24,8 +24,9 @@ No te saltes fases ni las reordenes.
 
 ## Reglas duras (aplican a todo el trabajo)
 
-1. **Siempre los CLIs.** El backend nace con `npx create-backapp` y el frontend con `npx create-frontapp`. Nunca copies
-   otro repo ni armes la estructura a mano: los CLIs ya traen auth, errores, CORS, Vercel, tokens SCSS y `CLAUDE.md`.
+1. **Siempre los CLIs.** El backend nace con `create-backapp` y el frontend con `create-frontapp` (por `npx` o con la
+   copia incluida en `scaffolding/`, ver Fase 1). Nunca copies otro repo ni armes la estructura a mano: los CLIs ya
+   traen auth, errores, CORS, Vercel, tokens SCSS y `CLAUDE.md`.
 2. **Secretos solo en `.env`.** Las credenciales llegan pegadas en el chat. Van al `.env` del backend y a ningún otro
    lugar: ni commits, ni mensajes de commit, ni README, ni `CLAUDE.md`, ni `.env.example` (ahí solo el nombre de la
    variable vacío), ni prompts de subagentes que no las necesiten. Antes del primer commit corre
@@ -73,14 +74,34 @@ entero por una credencial.
 
 ## Fase 1: scaffolding
 
-Verifica que los CLIs respondan con `command -v create-backapp create-frontapp`. Si no están, se enlazan desde
-`~/tools/scaffolding/create-backapp` y `create-frontapp` con `npm link` en cada carpeta.
+Los dos generadores vienen **incluidos en esta skill**, en `scaffolding/create-backapp` y `scaffolding/create-frontapp`.
+No tienen dependencias: solo piden Node 20 o superior. No están publicados en npm, así que un `npx create-backapp` a
+secas falla con 404 en cualquier máquina donde no estén enlazados. Por eso primero se resuelve cuál usar:
 
 ```bash
-mkdir -p ~/projects/work/bakano/clients/<cliente> && cd ~/projects/work/bakano/clients/<cliente>
+command -v create-backapp create-frontapp
+```
+
+- **Si responde con las dos rutas** (máquina con los CLIs enlazados por `npm link`): usa `npx create-backapp` y
+  `npx create-frontapp`. Es la fuente de verdad y puede estar más al día que la copia.
+- **Si no responde:** usa la copia incluida con `node`. `SKILL_DIR` es el directorio base de esta skill, el que se
+  informa al cargarla.
+
+```bash
+mkdir -p <carpeta-de-proyectos>/<cliente> && cd <carpeta-de-proyectos>/<cliente>
+
+# Con los CLIs enlazados
 npx create-backapp  <cliente> -y --uploads --domain <dominio-produccion>
 npx create-frontapp <cliente> -y --title "<Nombre visible>" --color "<#hex de marca>" --domain <dominio-produccion>
+
+# Con la copia incluida (mismos flags)
+node "$SKILL_DIR/scaffolding/create-backapp/bin/create-backapp.js"   <cliente> -y --uploads --domain <dominio-produccion>
+node "$SKILL_DIR/scaffolding/create-frontapp/bin/create-frontapp.js" <cliente> -y --title "<Nombre visible>" --color "<#hex de marca>" --domain <dominio-produccion>
 ```
+
+- **Carpeta de proyectos:** si existe `~/projects/work/bakano/clients`, va ahí. Si no, pregunta dónde crear los repos;
+  no asumas una ruta en una máquina ajena.
+- Si no hay `pnpm`, agrega `--pm npm`.
 
 - `--uploads` siempre que haya portadas, imágenes o archivos (casi siempre).
 - `--cron` si hay tareas programadas: vencimiento de accesos, recordatorios, reportes.
