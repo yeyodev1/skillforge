@@ -1,0 +1,23 @@
+{
+  "skill_name": "editor-reels-remotion",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Quiero editar mis reels con Claude Code y Remotion. Nunca lo he usado. Tengo un video crudo en ~/Desktop/reel-lunes.mp4, córtale los silencios y ponle subtítulos grandes.",
+      "expected_output": "Debe verificar Node, FFmpeg y whisper-cli antes de nada; montar el proyecto con create-video --blank, instalar los paquetes con npx remotion add y copiar la plantilla y los scripts; copiar el video a public/crudo/; mostrar el plan y esperar confirmación. Tras confirmar, correr detectar-silencios.mjs y transcribir.mjs con --idioma es, mostrar el texto y las palabras dudosas para revisarlas, y abrir npm run dev. No debe agregar LUT, título ni SFX que el usuario no pidió.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "En el reel de precios pon un whoosh en cada corte y un ding cuando aparezca un número, y aplícale mi LUT que está en public/marca/look.cube. Ah, y los subtítulos que salgan más arriba.",
+      "expected_output": "Debe hornear el LUT con ffmpeg lut3d a public/reels/<slug>/graded.mp4 sin tocar el crudo; crear sfx.json con las claves whoosh y ding (sin calcular tiempos a mano) comprobando que existan los archivos en public/sfx/ o preguntando por ellos; y mover el top en Subtitulos.tsx sin salir de la zona segura. No debe volver a transcribir ni a detectar silencios.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Ya está bien el reel, expórtalo. Y la semana que viene quiero hacer lo mismo con 4 videos más, ¿cómo lo hacemos?",
+      "expected_output": "Debe renderizar con npx remotion render Reel-<slug> out/<slug>.mp4 --codec h264 --crf 18, verificar con ffprobe resolución 1080x1920, 30 fps y audio, e indicar dónde quedó. Para los siguientes, debe explicar que se reutiliza el mismo proyecto: un folder por reel en public/reels/, una entrada en el arreglo reels de Root.tsx y los mismos parámetros guardados en preset.json. No debe publicar el video sin que se lo pidan.",
+      "files": []
+    }
+  ]
+}
