@@ -1,0 +1,13 @@
+{
+  "name": "editor-reels-remotion",
+  "version": "1.0.0",
+  "description": "Edita reels verticales pidiéndolo en texto con Claude Code y Remotion: corta silencios, aplica tu LUT, subtítulos estilo TikTok con Whisper local, título animado, whoosh y ding automáticos, tu marca y export en 1080x1920.",
+  "author": {
+    "name": "Diego Reyes",
+    "url": "https://github.com/yeyodev1"
+  },
+  "homepage": "https://github.com/yeyodev1/skillforge/tree/main/plugins/editor-reels-remotion",
+  "repository": "https://github.com/yeyodev1/skillforge",
+  "license": "MIT",
+  "keywords": ["remotion", "reels", "tiktok", "video", "subtitulos", "whisper", "ffmpeg", "lut", "edicion"]
+}
