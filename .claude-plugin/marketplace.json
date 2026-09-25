@@ -28,6 +28,17 @@
       "source": "./plugins/constructor-web-bakano",
       "category": "development",
       "homepage": "https://github.com/yeyodev1/skillforge/tree/main/plugins/constructor-web-bakano"
+    },
+    {
+      "name": "editor-reels-remotion",
+      "description": "Edita reels verticales pidiéndolo en texto con Claude Code y Remotion: corta silencios, aplica tu LUT, subtítulos estilo TikTok con Whisper local, título animado, whoosh y ding automáticos, tu marca y export en 1080x1920.",
+      "author": {
+        "name": "Diego Reyes",
+        "url": "https://github.com/yeyodev1"
+      },
+      "source": "./plugins/editor-reels-remotion",
+      "category": "productivity",
+      "homepage": "https://github.com/yeyodev1/skillforge/tree/main/plugins/editor-reels-remotion"
     }
   ]
 }
