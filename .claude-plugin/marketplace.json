@@ -39,6 +39,17 @@
       "source": "./plugins/editor-reels-remotion",
       "category": "productivity",
       "homepage": "https://github.com/yeyodev1/skillforge/tree/main/plugins/editor-reels-remotion"
+    },
+    {
+      "name": "editor-reels-davinci",
+      "description": "Edita reels con el flujo de Bakano: DaVinci Resolve hace la edición por script (MCP) y Remotion solo las gráficas con alfa detrás y delante de la persona. Música de Pixabay al compás, voz limpia, SFX, logos reales y subida a Drive.",
+      "author": {
+        "name": "Diego Reyes",
+        "url": "https://github.com/yeyodev1"
+      },
+      "source": "./plugins/editor-reels-davinci",
+      "category": "productivity",
+      "homepage": "https://github.com/yeyodev1/skillforge/tree/main/plugins/editor-reels-davinci"
     }
   ]
 }

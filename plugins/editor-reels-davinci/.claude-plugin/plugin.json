@@ -1,0 +1,13 @@
+{
+  "name": "editor-reels-davinci",
+  "version": "1.0.0",
+  "description": "Edita reels con el flujo de Bakano: DaVinci Resolve hace la edición por script (MCP) y Remotion solo las gráficas con alfa detrás y delante de la persona. Voz limpia con DeepFilterNet, cortes por palabra con WhisperX, música de Pixabay al compás con ducking, SFX, logos reales y subida a Drive.",
+  "author": {
+    "name": "Diego Reyes",
+    "url": "https://github.com/yeyodev1"
+  },
+  "homepage": "https://github.com/yeyodev1/skillforge/tree/main/plugins/editor-reels-davinci",
+  "repository": "https://github.com/yeyodev1/skillforge",
+  "license": "MIT",
+  "keywords": ["davinci-resolve", "remotion", "reels", "video", "musica", "pixabay", "whisperx", "deepfilternet", "edicion"]
+}

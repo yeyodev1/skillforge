@@ -8,7 +8,7 @@ Skills de marketing, pauta, estrategia, desarrollo y productividad, listos para 
 
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Plugin%20Marketplace-D97757?style=for-the-badge&logo=anthropic&logoColor=white)](https://docs.anthropic.com/en/docs/claude-code)
 [![License: MIT](https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge)](LICENSE)
-[![Skills](https://img.shields.io/badge/Skills-3-3b82f6?style=for-the-badge)](#-catálogo-de-skills)
+[![Skills](https://img.shields.io/badge/Skills-4-3b82f6?style=for-the-badge)](#-catálogo-de-skills)
 
 </div>
 
@@ -56,6 +56,7 @@ estratega-anuncios.zip
 | 🎯 [**estratega-anuncios**](plugins/estratega-anuncios) | Onboarding de clientes, auditoría de competencia en **Meta Ads Library**, matriz GAP comunicacional y estrategia de pauta con guiones. 100% anuncios pagos. | *"haz el onboarding de este cliente"*, *"audita los anuncios de la competencia de [marca]"*, *"crea la estrategia de anuncios de [negocio]"* |
 | 🏗️ [**constructor-web-bakano**](plugins/constructor-web-bakano) | Del brief de la reunión a la plataforma funcionando: `create-backapp` + `create-frontapp`, **MongoDB Atlas por MCP**, Payphone, Bunny Stream, Cloudinary, Resend, contenido desde Drive y accesos de alumnos. | *"haz el back y el front"*, *"construye la web de [cliente]"*, *"sube los cursos del drive"* |
 | 🎬 [**editor-reels-remotion**](plugins/editor-reels-remotion) | Edita reels pidiéndolo en texto con **Remotion**: corta silencios, aplica tu LUT, subtítulos estilo TikTok con **Whisper local**, título animado, whoosh y ding automáticos, tu marca y export en 1080x1920. | *"edítame este reel"*, *"corta los silencios"*, *"ponle subtítulos grandes"* |
+| 🎞️ [**editor-reels-davinci**](plugins/editor-reels-davinci) | El flujo de Bakano: **DaVinci Resolve** edita por script y **Remotion** solo hace las gráficas detrás y delante de la persona. Voz limpia, cortes por palabra, **música de Pixabay** al compás, SFX, logos reales y subida a Drive. | *"edítame este reel"*, *"ponle música"*, *"pásalo a DaVinci"* |
 
 > 🔜 Más skills en camino. Este repo es el hogar de todos los plugins que publico.
 
