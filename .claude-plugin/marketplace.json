@@ -50,6 +50,17 @@
       "source": "./plugins/editor-reels-davinci",
       "category": "productivity",
       "homepage": "https://github.com/yeyodev1/skillforge/tree/main/plugins/editor-reels-davinci"
+    },
+    {
+      "name": "reel-diorama-3d",
+      "description": "Reels sin cara en estilo diorama 3D de juguete (muñequitos low-poly, papel, noche, flash rosa) con guion en escalera: despides al humano, pones una IA y ves qué falla.",
+      "author": {
+        "name": "Diego Reyes",
+        "url": "https://github.com/yeyodev1"
+      },
+      "source": "./plugins/reel-diorama-3d",
+      "category": "productivity",
+      "homepage": "https://github.com/yeyodev1/skillforge/tree/main/plugins/reel-diorama-3d"
     }
   ]
 }

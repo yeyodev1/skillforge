@@ -1,0 +1,22 @@
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&family=Instrument+Serif:ital@0;1&family=Patrick+Hand&family=Gochi+Hand&display=block");
+      /* Aspecto «diorama»: maqueta 3D de juguete, de noche, textura de papel. Se copia a <proyecto>/estilo.css. */
+      :root {
+        --fondo: #1b1d44;           /* el cielo de noche (también el de mundo() en diorama.js) */
+        --fondo-claro: #f5efe6;
+        --rejilla: rgba(255, 255, 255, 0);
+        --tinta: #ffffff;           /* subtítulo blanco */
+        --tinta-dicha: #ffffff;
+        --tinta-oscura: #1e1a1c;
+        --marca: #e86a8a;
+        --verde: #3d8f86;
+        --rojo: #d9634a;
+        --ambar: #efe48c;
+        --letra: "Inter";
+        --letra-cursiva: "Instrument Serif";
+        --letra-mano: "Patrick Hand";
+        --letra-mono: "JetBrains Mono";
+        --sub-tam: 68px;
+        --sub-arriba: 318px;
+        --sub-abajo: 1200px;
+        --sub-diorama: 1170px;      /* subtítulo diorama: debajo del centro, dentro de la zona segura */
+      }

@@ -1,0 +1,13 @@
+{
+  "name": "reel-diorama-3d",
+  "version": "1.0.0",
+  "description": "Reels verticales sin cara en estilo diorama 3D de juguete (muñequitos cabezones low-poly, textura de papel, noche, flash rosa, subtítulos con la clave en serif cursiva), con guion en escalera «despides al humano, pones una IA, ¿qué falla?». Voz ElevenLabs + HyperFrames + three.js.",
+  "author": {
+    "name": "Diego Reyes",
+    "url": "https://github.com/yeyodev1"
+  },
+  "homepage": "https://github.com/yeyodev1/skillforge/tree/main/plugins/reel-diorama-3d",
+  "repository": "https://github.com/yeyodev1/skillforge",
+  "license": "MIT",
+  "keywords": ["reels", "video", "3d", "diorama", "threejs", "hyperframes", "elevenlabs", "faceless"]
+}
