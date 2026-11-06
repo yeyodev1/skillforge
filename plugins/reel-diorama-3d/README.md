@@ -10,6 +10,13 @@ Reels verticales **sin cara** en estilo maqueta 3D de juguete, como los de rafaa
 - **Subtítulos:** 1-3 palabras blancas apiladas, la palabra clave en serif cursiva.
 - Al terminar, te avisa con una notificación del Mac y la ruta del video.
 
+## 📦 Instalación
+
+```
+/plugin marketplace add yeyodev1/skillforge
+/plugin install reel-diorama-3d@skillforge
+```
+
 ## Requisitos
 
 - El paquete **Reels Explicativos** (0.7+) en `~/reels-explicativos` (HyperFrames, ElevenLabs, three.js).
