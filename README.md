@@ -49,6 +49,29 @@ estratega-anuncios.zip
         └── evals.json
 ```
 
+## 📦 Cómo instalar cada skill
+
+En **Claude Code**, agrega el marketplace una sola vez:
+
+```
+/plugin marketplace add yeyodev1/skillforge
+```
+
+Y luego instala el que necesites con su comando. Para **Claude.ai**, baja el ZIP y súbelo en **Configuración → Capacidades → Skills**.
+
+| Skill | Claude Code | ZIP | Qué necesita aparte |
+|---|---|---|---|
+| 🎯 [**estratega-anuncios**](plugins/estratega-anuncios) | `/plugin install estratega-anuncios@skillforge` | [estratega-anuncios.zip](https://github.com/yeyodev1/skillforge/releases/download/estratega-anuncios-v1.0.0/estratega-anuncios.zip) | Nada extra. Opcional: MCP de Meta Ads para la Ads Library |
+| 🏗️ [**constructor-web-bakano**](plugins/constructor-web-bakano) | `/plugin install constructor-web-bakano@skillforge` | [constructor-web-bakano.zip](https://github.com/yeyodev1/skillforge/releases/download/constructor-web-bakano-v1.1.0/constructor-web-bakano.zip) | Node 20+, pnpm, MCP de MongoDB Atlas y MCP de Google Drive |
+| 🎬 [**editor-reels-remotion**](plugins/editor-reels-remotion) | `/plugin install editor-reels-remotion@skillforge` | [editor-reels-remotion.zip](https://github.com/yeyodev1/skillforge/releases/download/editor-reels-remotion-v1.0.0/editor-reels-remotion.zip) | Node, FFmpeg y whisper.cpp (`brew install node ffmpeg whisper-cpp`) |
+| 🎞️ [**editor-reels-davinci**](plugins/editor-reels-davinci) | `/plugin install editor-reels-davinci@skillforge` | [editor-reels-davinci.zip](https://github.com/yeyodev1/skillforge/releases/download/editor-reels-davinci-v1.0.0/editor-reels-davinci.zip) | DaVinci Resolve Studio + su MCP, FFmpeg, uv, WhisperX, Node y Xcode CLT |
+| 🧸 [**reel-diorama-3d**](plugins/reel-diorama-3d) | `/plugin install reel-diorama-3d@skillforge` | Aún sin ZIP (usa el marketplace) | Paquete Reels Explicativos 0.7+ en `~/reels-explicativos` y copiar el `kit/` |
+| 🖼️ [**estaticos-vendedores**](plugins/estaticos-vendedores) | `/plugin install estaticos-vendedores@skillforge` | [estaticos-vendedores.zip](https://github.com/yeyodev1/skillforge/releases/download/estaticos-vendedores-v1.0.0/estaticos-vendedores.zip) | Recomendado: Higgsfield CLI. Opcional: Chrome + Pillow (Plan HTML), MCP de Meta Ads |
+
+Cada skill tiene en su carpeta un README con los requisitos completos y la guía de uso. La más detallada es la de [**estaticos-vendedores**](plugins/estaticos-vendedores#-instalación).
+
+Para actualizar: `/plugin marketplace update skillforge`. Para quitar uno: `/plugin uninstall <nombre>@skillforge`.
+
 ## 📚 Catálogo de skills
 
 | Skill | ¿Qué hace? | Disparadores |
