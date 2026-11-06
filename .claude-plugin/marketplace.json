@@ -61,6 +61,17 @@
       "source": "./plugins/reel-diorama-3d",
       "category": "productivity",
       "homepage": "https://github.com/yeyodev1/skillforge/tree/main/plugins/reel-diorama-3d"
+    },
+    {
+      "name": "estaticos-vendedores",
+      "description": "Estáticos publicitarios para Meta Ads (1:1, 4:5, 9:16) pensados para vender: ficha de marca, 3 ángulos de venta, copy para la pieza y el Administrador de Anuncios, generación con Higgsfield o maquetado HTML, control de calidad y test A/B.",
+      "author": {
+        "name": "Diego Reyes",
+        "url": "https://github.com/yeyodev1"
+      },
+      "source": "./plugins/estaticos-vendedores",
+      "category": "marketing",
+      "homepage": "https://github.com/yeyodev1/skillforge/tree/main/plugins/estaticos-vendedores"
     }
   ]
 }
